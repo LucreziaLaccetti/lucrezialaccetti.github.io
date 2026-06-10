@@ -58,8 +58,8 @@ p { margin: 0 0 1rem; }
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
-.section { padding: 72px 0; }
-.section--tight { padding: 48px 0; }
+.section { padding-block: 72px; }
+.section--tight { padding-block: 48px; }
 .section--alt { background: var(--paper-2); }
 
 .eyebrow {
@@ -131,7 +131,7 @@ p { margin: 0 0 1rem; }
 }
 
 /* ---------- Hero (home) ---------- */
-.hero { padding: 70px 0 40px; }
+.hero { padding-block: 70px 40px; }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -212,7 +212,7 @@ p { margin: 0 0 1rem; }
 .btn--ghost:hover { background: var(--green-800); color: #fff; }
 
 /* ---------- Page header ---------- */
-.page-head { padding: 60px 0 10px; }
+.page-head { padding-block: 60px 10px; }
 .page-head h1 { font-size: 2.6rem; }
 
 /* ---------- Generic prose ---------- */
@@ -370,12 +370,20 @@ figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }
 /* ---------- Outreach media thumbnails ---------- */
 .media-item { display: flex; gap: 20px; align-items: flex-start; }
 .media-item .thumb {
-  flex: 0 0 200px;
+  flex: 0 0 300px;
   border-radius: 10px;
   overflow: hidden;
   border: 1px solid var(--line);
 }
-.media-item .thumb img { width: 100%; display: block; aspect-ratio: 16/9; object-fit: cover; }
+/* identical thumbnail boxes; ratio matches the first (wide) image so it is
+   not cropped, while taller images are trimmed from the bottom (text on top) */
+.media-item .thumb img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1000 / 482;
+  object-fit: cover;
+  object-position: top;
+}
 @media (max-width: 720px) {
   .figure-row, .figure-row.reverse { grid-template-columns: 1fr; gap: 22px; }
   .media-item { flex-direction: column; }
@@ -431,7 +439,7 @@ figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }
 @media (max-width: 860px) {
   body { font-size: 16px; }
   .hero-grid { grid-template-columns: 1fr; gap: 30px; }
-  .hero { padding: 40px 0 10px; }
+  .hero { padding-block: 40px 10px; }
   .portrait { max-width: 320px; margin: 0 auto; }
   .hero h1 { font-size: 2.4rem; }
   h2 { font-size: 1.6rem; }
