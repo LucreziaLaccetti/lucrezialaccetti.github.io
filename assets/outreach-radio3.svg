@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 482">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c1c2e"/>
+      <stop offset="100%" stop-color="#0d0d1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="482" fill="url(#g)"/>
+  <circle cx="500" cy="180" r="52" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="500" cy="180" r="12" fill="#c0392b"/>
+  <path d="M448 180 Q448 128 500 128 Q552 128 552 180" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <path d="M424 180 Q424 104 500 104 Q576 104 576 180" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-dasharray="4,5" opacity="0.5"/>
+  <text x="500" y="278" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#e0e0e0" text-anchor="middle" letter-spacing="3">Radio3 Scienza</text>
+  <text x="500" y="318" font-family="Arial, sans-serif" font-size="18" fill="#888" text-anchor="middle" letter-spacing="2">RAI PLAY SOUND · 2025</text>
+</svg>
