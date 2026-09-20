@@ -238,6 +238,17 @@ p { margin: 0 0 1rem; }
 }
 .card .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+/* ---------- Current roles (home) ---------- */
+.roles { padding-block: 16px 72px; }
+.roles > h2 {
+  margin: 0 0 26px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+.roles .cards { grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); }
+.roles .card { padding: 24px 22px; }
+.roles .card h3 { font-size: 1.02rem; line-height: 1.32; }
+
 /* ---------- Timeline ---------- */
 .timeline { list-style: none; margin: 0; padding: 0; }
 .timeline > li {
@@ -363,7 +374,7 @@ p { margin: 0 0 1rem; }
   width: 100%;
   border-radius: var(--radius);
 }
-.figure-plain img { width: 100%; border-radius: var(--radius); }
+.figure-plain img { width: 100%; }
 .media-full { margin: 28px 0 8px; }
 .media-full img { width: 100%; height: clamp(280px, 48vh, 540px); object-fit: cover; display: block; }
 figure { margin: 0; }
