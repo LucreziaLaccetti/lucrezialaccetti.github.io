@@ -213,7 +213,9 @@ p { margin: 0 0 1rem; }
 
 /* ---------- Page header ---------- */
 .page-head { padding-block: 60px 10px; }
-.page-head h1 { font-size: 2.6rem; }
+.page-head h1 { font-size: 2.6rem; text-wrap: balance; }
+.page-head--center { text-align: center; }
+.page-head--center h1 { margin-inline: auto; }
 
 /* ---------- Generic prose ---------- */
 .prose { max-width: 760px; }
@@ -474,7 +476,7 @@ figcaption { font-size: .85rem; color: var(--muted); margin-top: 8px; }
   body { font-size: 16px; }
   .hero-grid { grid-template-columns: 1fr; gap: 30px; }
   .hero { padding-block: 40px 10px; }
-  .portrait { max-width: 320px; margin: 0 auto; }
+  .portrait { max-width: 320px; margin: 0 auto; width: 100%; }
   .hero h1 { font-size: 2.4rem; }
   h2 { font-size: 1.6rem; }
   .page-head h1 { font-size: 2.1rem; }
