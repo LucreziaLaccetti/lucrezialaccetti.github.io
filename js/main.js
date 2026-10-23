@@ -16,15 +16,16 @@
 (function () {
   var buttons = document.querySelectorAll('.pubfilter button');
   if (!buttons.length) return;
-  var items = document.querySelectorAll('.publist .pub');
+  // each category sits in its own .pubgroup, so whole groups (heading included) are toggled
+  var groups = document.querySelectorAll('.pubgroup');
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var f = btn.getAttribute('data-filter');
       buttons.forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
-      items.forEach(function (it) {
-        var cat = it.getAttribute('data-cat') || '';
-        it.style.display = (f === 'all' || cat.indexOf(f) > -1) ? 'flex' : 'none';
+      groups.forEach(function (g) {
+        var cat = g.getAttribute('data-cat') || '';
+        g.style.display = (f === 'all' || cat === f) ? '' : 'none';
       });
     });
   });
